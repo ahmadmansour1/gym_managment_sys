@@ -10,5 +10,5 @@ class Result<T> {
   final T? data;
   final Failure? failure;
 
-  bool get isOk => failure == null && data != null;
+  bool get isOk => failure == null;
 }

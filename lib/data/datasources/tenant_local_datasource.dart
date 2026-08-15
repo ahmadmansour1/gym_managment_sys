@@ -2,6 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart';
 
+import '../../domain/entities/member.dart';
+import '../../domain/entities/membership_plan.dart';
 import '../../domain/entities/subscription.dart';
 import '../models/tenant_models.dart';
 
@@ -44,6 +46,11 @@ class TenantLocalDataSource {
         .map((member) => MemberModel.fromJson(member, gymId: gym.id))
         .toList();
 
+    final admins = (json['admins'] as List<dynamic>? ?? [])
+        .cast<Map<String, dynamic>>()
+        .map((admin) => StaffModel.fromJson(admin, gymId: gym.id))
+        .toList();
+
     final subscriptions = (json['subscriptions'] as List<dynamic>)
         .cast<Map<String, dynamic>>()
         .map(
@@ -56,6 +63,7 @@ class TenantLocalDataSource {
       gym: gym,
       plans: plans,
       members: members,
+      admins: admins,
       subscriptions: subscriptions,
     );
     return _snapshot!;
@@ -68,5 +76,19 @@ class TenantLocalDataSource {
       (item) => item.memberId == subscription.memberId,
     );
     snapshot.subscriptions.add(subscription);
+  }
+
+  void addMember(MemberModel member) {
+    _snapshot?.members.add(member);
+  }
+
+  void addPlan(MembershipPlan plan) {
+    _snapshot?.plans.add(plan);
+  }
+
+  Member? memberById(String id) {
+    final match = _snapshot?.members.where((item) => item.entity.id == id);
+    if (match == null || match.isEmpty) return null;
+    return match.first.entity;
   }
 }

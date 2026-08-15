@@ -50,6 +50,15 @@
       "features": ["Unlimited classes", "1 guest class / month", "Priority booking"]
     }
   ],
+  "admins": [
+    {
+      "id": "admin-nova",
+      "name": "Nova Hale",
+      "email": "admin@aura.test",
+      "password": "123456",
+      "role": "owner"
+    }
+  ],
   "members": [
     {
       "id": "member-maya",

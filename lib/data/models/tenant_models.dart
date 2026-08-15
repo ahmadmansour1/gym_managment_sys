@@ -3,6 +3,7 @@ import '../../domain/entities/brand_theme.dart';
 import '../../domain/entities/gym.dart';
 import '../../domain/entities/member.dart';
 import '../../domain/entities/membership_plan.dart';
+import '../../domain/entities/staff.dart';
 import '../../domain/entities/subscription.dart';
 
 class BrandThemeModel {
@@ -173,16 +174,41 @@ class GymModel {
   }
 }
 
+class StaffModel {
+  const StaffModel({required this.entity, required this.password});
+
+  final Staff entity;
+  final String password;
+
+  factory StaffModel.fromJson(
+    Map<String, dynamic> json, {
+    required String gymId,
+  }) {
+    return StaffModel(
+      entity: Staff(
+        id: json['id'] as String,
+        gymId: gymId,
+        name: json['name'] as String,
+        email: json['email'] as String,
+        role: json['role'] as String? ?? 'staff',
+      ),
+      password: json['password'] as String,
+    );
+  }
+}
+
 class TenantSnapshot {
   TenantSnapshot({
     required this.gym,
     required this.plans,
     required this.members,
+    required this.admins,
     required this.subscriptions,
   });
 
   final Gym gym;
   final List<MembershipPlan> plans;
   final List<MemberModel> members;
+  final List<StaffModel> admins;
   final List<Subscription> subscriptions;
 }
