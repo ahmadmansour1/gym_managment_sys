@@ -1,0 +1,134 @@
+{
+  "id": "gym-a",
+  "name": "Iron Peak",
+  "tagline": "Forge strength. Own the iron.",
+  "city": "Austin, TX",
+  "hours": "5:00 AM – 11:00 PM",
+  "icon": "fitness_center",
+  "theme": {
+    "brightness": "dark",
+    "primary": "#E11D48",
+    "secondary": "#FB7185",
+    "accent": "#F59E0B",
+    "background": "#0B0B0F",
+    "surface": "#16161D",
+    "surfaceVariant": "#1F1F2A",
+    "onPrimary": "#FFFFFF",
+    "onBackground": "#FAFAFA",
+    "onSurface": "#E4E4E7",
+    "muted": "#A1A1AA",
+    "success": "#22C55E",
+    "error": "#EF4444",
+    "borderRadius": 14,
+    "buttonShape": "rounded",
+    "cardStyle": "filled",
+    "titleStyle": "athletic"
+  },
+  "plans": [
+    {
+      "id": "plan-1-month",
+      "name": "1 Month",
+      "description": "Month-to-month floor access. Start whenever you are ready.",
+      "price": 49,
+      "currency": "USD",
+      "durationMonths": 1,
+      "durationDays": 30,
+      "isFeatured": false,
+      "isPopular": false,
+      "features": [
+        "Unlimited gym access",
+        "Free weights and racks",
+        "Locker use"
+      ]
+    },
+    {
+      "id": "plan-3-months",
+      "name": "3 Months",
+      "description": "A short block to build a lifting streak without a yearly commit.",
+      "price": 129,
+      "currency": "USD",
+      "durationMonths": 3,
+      "durationDays": 90,
+      "isFeatured": false,
+      "isPopular": true,
+      "features": [
+        "Unlimited gym access",
+        "1 guest pass / month",
+        "Save vs paying monthly"
+      ]
+    },
+    {
+      "id": "plan-6-months",
+      "name": "6 Months",
+      "description": "Half a year of Iron Peak. Best middle ground for committed lifters.",
+      "price": 239,
+      "currency": "USD",
+      "durationMonths": 6,
+      "durationDays": 180,
+      "isFeatured": true,
+      "isPopular": false,
+      "features": [
+        "Unlimited gym access",
+        "2 guest passes / month",
+        "1 coaching check-in"
+      ]
+    },
+    {
+      "id": "plan-12-months",
+      "name": "12 Months",
+      "description": "Lock the year and get the lowest monthly rate we offer.",
+      "price": 429,
+      "currency": "USD",
+      "durationMonths": 12,
+      "durationDays": 365,
+      "isFeatured": false,
+      "isPopular": false,
+      "features": [
+        "Unlimited gym access",
+        "4 guest passes / month",
+        "Sauna access",
+        "Annual strength assessment"
+      ]
+    }
+  ],
+  "members": [
+    {
+      "id": "member-alex",
+      "name": "Alex Rivera",
+      "email": "alex@ironpeak.test",
+      "password": "123456"
+    },
+    {
+      "id": "member-sam",
+      "name": "Sam Chen",
+      "email": "sam@ironpeak.test",
+      "password": "123456"
+    },
+    {
+      "id": "member-jordan",
+      "name": "Jordan Blake",
+      "email": "jordan@ironpeak.test",
+      "password": "123456"
+    }
+  ],
+  "subscriptions": [
+    {
+      "id": "sub-alex-1",
+      "memberId": "member-alex",
+      "planId": "plan-1-month",
+      "planName": "1 Month",
+      "startsAt": "2026-07-20",
+      "expiresAt": "2026-08-20",
+      "status": "active"
+    },
+    {
+      "id": "sub-sam-1",
+      "memberId": "member-sam",
+      "planId": "plan-3-months",
+      "planName": "3 Months",
+      "startsAt": "2026-04-01",
+      "expiresAt": "2026-07-01",
+      "status": "expired"
+    }
+  ]
+}

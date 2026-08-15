@@ -1,0 +1,4 @@
+{
+  "tenantId": "gym-a",
+  "note": "This binary is one gym's member app. Switch tenantId to gym-b to run a different gym. Later this is the app flavor / Firebase project."
+}

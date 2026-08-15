@@ -1,0 +1,72 @@
+{
+  "id": "gym-b",
+  "name": "Aura Studio",
+  "tagline": "Move slowly. Feel everything.",
+  "city": "Santa Monica, CA",
+  "hours": "6:00 AM – 9:00 PM",
+  "icon": "spa",
+  "theme": {
+    "brightness": "light",
+    "primary": "#4A7C59",
+    "secondary": "#8FBC8F",
+    "accent": "#C4A574",
+    "background": "#F7F3EC",
+    "surface": "#FFFBF5",
+    "surfaceVariant": "#EFE6D9",
+    "onPrimary": "#FFFFFF",
+    "onBackground": "#2C2A26",
+    "onSurface": "#3D3A34",
+    "muted": "#7A7468",
+    "success": "#3D8B6E",
+    "error": "#C45C4A",
+    "borderRadius": 28,
+    "buttonShape": "pill",
+    "cardStyle": "elevated",
+    "titleStyle": "elegant"
+  },
+  "plans": [
+    {
+      "id": "aura-1-month",
+      "name": "1 Month",
+      "description": "A month of classes and the tea lounge.",
+      "price": 69,
+      "currency": "USD",
+      "durationMonths": 1,
+      "durationDays": 30,
+      "isFeatured": false,
+      "isPopular": false,
+      "features": ["Unlimited classes", "Tea lounge", "Mat rental"]
+    },
+    {
+      "id": "aura-3-months",
+      "name": "3 Months",
+      "description": "Stay with the rhythm for a season.",
+      "price": 189,
+      "currency": "USD",
+      "durationMonths": 3,
+      "durationDays": 90,
+      "isFeatured": true,
+      "isPopular": true,
+      "features": ["Unlimited classes", "1 guest class / month", "Priority booking"]
+    }
+  ],
+  "members": [
+    {
+      "id": "member-maya",
+      "name": "Maya Ortiz",
+      "email": "maya@aura.test",
+      "password": "123456"
+    }
+  ],
+  "subscriptions": [
+    {
+      "id": "sub-maya-1",
+      "memberId": "member-maya",
+      "planId": "aura-3-months",
+      "planName": "3 Months",
+      "startsAt": "2026-06-15",
+      "expiresAt": "2026-09-15",
+      "status": "active"
+    }
+  ]
+}
